@@ -24,6 +24,12 @@ FURNISH_MAP = {
     'furnished'      : 2
 }
 
+with open('market_stats.json', 'r') as f:
+    MARKET_STATS = json.load(f)
+
+@app.route('/market-stats',methods=['GET'])
+def market_stats():
+    return jsonify(MARKET_STATS)
 
 @app.route('/', methods=['GET'])
 def health():
