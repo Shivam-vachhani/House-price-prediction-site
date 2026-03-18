@@ -24,12 +24,25 @@ FURNISH_MAP = {
     'furnished'      : 2
 }
 
+
+
 with open('market_stats.json', 'r') as f:
     MARKET_STATS = json.load(f)
 
 @app.route('/market-stats',methods=['GET'])
 def market_stats():
     return jsonify(MARKET_STATS)
+
+
+
+with open("model_comparison.json",'r') as f:
+    MODEL_COMPARISON = json.load(f)
+
+@app.route("/model-comparison", methods=['GET'])
+def model_comparison():
+    return jsonify(MODEL_COMPARISON)
+
+
 
 @app.route('/', methods=['GET'])
 def health():
