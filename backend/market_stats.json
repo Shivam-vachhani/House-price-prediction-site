@@ -1,0 +1,1492 @@
+{
+  "kpis": {
+    "avg_price_lakhs": 216.01,
+    "price_per_sqft": 6564.0,
+    "total_listings": 5622,
+    "top_locality": "Shela"
+  },
+  "locality_avg": {
+    "iscon ambli road": 547.41,
+    "rajpath rangoli road": 530.67,
+    "panchavati society": 515.67,
+    "ambli": 467.81,
+    "bodakdev": 421.68,
+    "sindhu bhavan marg": 366.72,
+    "thaltej": 346.49,
+    "hebatpur": 338.97,
+    "satellite": 269.65,
+    "drive in road": 260.0
+  },
+  "bhk_median": {
+    "1.0": 27.32,
+    "2.0": 50.83,
+    "3.0": 113.71,
+    "4.0": 339.74,
+    "5.0": 529.62,
+    "6.0": 691.8
+  },
+  "histogram": [
+    {
+      "range": "\u20b98L - 216L",
+      "count": 3348
+    },
+    {
+      "range": "\u20b9216L - 424L",
+      "count": 1437
+    },
+    {
+      "range": "\u20b9424L - 632L",
+      "count": 621
+    },
+    {
+      "range": "\u20b9632L - 840L",
+      "count": 181
+    },
+    {
+      "range": "\u20b9840L - 1048L",
+      "count": 26
+    },
+    {
+      "range": "\u20b91048L - 1256L",
+      "count": 4
+    },
+    {
+      "range": "\u20b91256L - 1464L",
+      "count": 2
+    },
+    {
+      "range": "\u20b91464L - 1672L",
+      "count": 3
+    }
+  ],
+  "scatter": [
+    {
+      "area": 2148.0,
+      "Price": 292.0
+    },
+    {
+      "area": 1038.0,
+      "Price": 93.0
+    },
+    {
+      "area": 650.0,
+      "Price": 55.0
+    },
+    {
+      "area": 1943.0,
+      "Price": 180.0
+    },
+    {
+      "area": 3339.0,
+      "Price": 293.0
+    },
+    {
+      "area": 926.0,
+      "Price": 65.6
+    },
+    {
+      "area": 1333.0,
+      "Price": 111.0
+    },
+    {
+      "area": 780.0,
+      "Price": 70.0
+    },
+    {
+      "area": 1491.0,
+      "Price": 151.0
+    },
+    {
+      "area": 2174.0,
+      "Price": 305.0
+    },
+    {
+      "area": 4638.0,
+      "Price": 835.0
+    },
+    {
+      "area": 1027.0,
+      "Price": 97.0
+    },
+    {
+      "area": 1060.0,
+      "Price": 120.0
+    },
+    {
+      "area": 1540.0,
+      "Price": 120.0
+    },
+    {
+      "area": 1107.0,
+      "Price": 54.0
+    },
+    {
+      "area": 2889.0,
+      "Price": 360.0
+    },
+    {
+      "area": 2100.0,
+      "Price": 250.0
+    },
+    {
+      "area": 1300.0,
+      "Price": 85.0
+    },
+    {
+      "area": 880.0,
+      "Price": 58.0
+    },
+    {
+      "area": 3627.0,
+      "Price": 519.0
+    },
+    {
+      "area": 1900.0,
+      "Price": 200.0
+    },
+    {
+      "area": 733.0,
+      "Price": 38.0
+    },
+    {
+      "area": 1980.0,
+      "Price": 249.0
+    },
+    {
+      "area": 597.0,
+      "Price": 43.4
+    },
+    {
+      "area": 2100.0,
+      "Price": 375.0
+    },
+    {
+      "area": 1333.0,
+      "Price": 110.0
+    },
+    {
+      "area": 3726.0,
+      "Price": 600.0
+    },
+    {
+      "area": 2050.0,
+      "Price": 242.0
+    },
+    {
+      "area": 1085.0,
+      "Price": 76.0
+    },
+    {
+      "area": 2800.0,
+      "Price": 400.0
+    },
+    {
+      "area": 2842.0,
+      "Price": 318.0
+    },
+    {
+      "area": 1773.0,
+      "Price": 260.0
+    },
+    {
+      "area": 573.0,
+      "Price": 20.5
+    },
+    {
+      "area": 990.0,
+      "Price": 40.0
+    },
+    {
+      "area": 1111.0,
+      "Price": 110.0
+    },
+    {
+      "area": 2115.0,
+      "Price": 299.0
+    },
+    {
+      "area": 2970.0,
+      "Price": 340.0
+    },
+    {
+      "area": 963.0,
+      "Price": 30.0
+    },
+    {
+      "area": 4074.0,
+      "Price": 693.0
+    },
+    {
+      "area": 1000.0,
+      "Price": 155.0
+    },
+    {
+      "area": 1665.0,
+      "Price": 50.0
+    },
+    {
+      "area": 2400.0,
+      "Price": 130.0
+    },
+    {
+      "area": 4111.0,
+      "Price": 448.0
+    },
+    {
+      "area": 2736.0,
+      "Price": 235.0
+    },
+    {
+      "area": 296.0,
+      "Price": 12.0
+    },
+    {
+      "area": 3135.0,
+      "Price": 381.0
+    },
+    {
+      "area": 3600.0,
+      "Price": 170.0
+    },
+    {
+      "area": 1395.0,
+      "Price": 110.0
+    },
+    {
+      "area": 815.0,
+      "Price": 73.5
+    },
+    {
+      "area": 968.0,
+      "Price": 83.0
+    },
+    {
+      "area": 3445.0,
+      "Price": 345.0
+    },
+    {
+      "area": 687.0,
+      "Price": 36.0
+    },
+    {
+      "area": 4984.0,
+      "Price": 672.0
+    },
+    {
+      "area": 1700.0,
+      "Price": 72.0
+    },
+    {
+      "area": 2682.0,
+      "Price": 317.0
+    },
+    {
+      "area": 800.0,
+      "Price": 47.0
+    },
+    {
+      "area": 600.0,
+      "Price": 27.5
+    },
+    {
+      "area": 1435.0,
+      "Price": 115.0
+    },
+    {
+      "area": 1287.0,
+      "Price": 75.0
+    },
+    {
+      "area": 2257.0,
+      "Price": 252.0
+    },
+    {
+      "area": 4015.0,
+      "Price": 657.0
+    },
+    {
+      "area": 1900.0,
+      "Price": 311.0
+    },
+    {
+      "area": 3787.0,
+      "Price": 587.0
+    },
+    {
+      "area": 4800.0,
+      "Price": 312.0
+    },
+    {
+      "area": 1296.0,
+      "Price": 108.0
+    },
+    {
+      "area": 844.0,
+      "Price": 45.0
+    },
+    {
+      "area": 3088.0,
+      "Price": 310.0
+    },
+    {
+      "area": 704.0,
+      "Price": 49.0
+    },
+    {
+      "area": 1087.0,
+      "Price": 65.0
+    },
+    {
+      "area": 859.0,
+      "Price": 46.0
+    },
+    {
+      "area": 773.0,
+      "Price": 50.0
+    },
+    {
+      "area": 1467.0,
+      "Price": 260.0
+    },
+    {
+      "area": 2598.0,
+      "Price": 176.0
+    },
+    {
+      "area": 1120.0,
+      "Price": 142.0
+    },
+    {
+      "area": 4678.0,
+      "Price": 457.0
+    },
+    {
+      "area": 2150.0,
+      "Price": 341.0
+    },
+    {
+      "area": 815.0,
+      "Price": 44.0
+    },
+    {
+      "area": 520.0,
+      "Price": 16.0
+    },
+    {
+      "area": 815.0,
+      "Price": 105.0
+    },
+    {
+      "area": 5667.0,
+      "Price": 711.0
+    },
+    {
+      "area": 4015.0,
+      "Price": 657.0
+    },
+    {
+      "area": 2093.0,
+      "Price": 127.0
+    },
+    {
+      "area": 1481.0,
+      "Price": 200.0
+    },
+    {
+      "area": 938.0,
+      "Price": 42.5
+    },
+    {
+      "area": 844.0,
+      "Price": 45.0
+    },
+    {
+      "area": 878.0,
+      "Price": 70.0
+    },
+    {
+      "area": 2878.0,
+      "Price": 299.0
+    },
+    {
+      "area": 1195.0,
+      "Price": 132.0
+    },
+    {
+      "area": 1260.0,
+      "Price": 98.0
+    },
+    {
+      "area": 3548.0,
+      "Price": 600.0
+    },
+    {
+      "area": 1713.0,
+      "Price": 106.0
+    },
+    {
+      "area": 1842.0,
+      "Price": 184.0
+    },
+    {
+      "area": 1197.0,
+      "Price": 105.0
+    },
+    {
+      "area": 4420.0,
+      "Price": 665.0
+    },
+    {
+      "area": 833.0,
+      "Price": 42.0
+    },
+    {
+      "area": 3461.0,
+      "Price": 350.0
+    },
+    {
+      "area": 573.0,
+      "Price": 30.0
+    },
+    {
+      "area": 4074.0,
+      "Price": 450.0
+    },
+    {
+      "area": 2749.0,
+      "Price": 350.0
+    },
+    {
+      "area": 1040.0,
+      "Price": 82.0
+    },
+    {
+      "area": 3335.0,
+      "Price": 539.0
+    },
+    {
+      "area": 2010.0,
+      "Price": 350.0
+    },
+    {
+      "area": 4448.0,
+      "Price": 540.0
+    },
+    {
+      "area": 726.0,
+      "Price": 50.0
+    },
+    {
+      "area": 6506.0,
+      "Price": 990.0
+    },
+    {
+      "area": 1557.0,
+      "Price": 80.0
+    },
+    {
+      "area": 663.0,
+      "Price": 45.0
+    },
+    {
+      "area": 3296.0,
+      "Price": 267.0
+    },
+    {
+      "area": 753.0,
+      "Price": 38.0
+    },
+    {
+      "area": 5733.0,
+      "Price": 774.0
+    },
+    {
+      "area": 867.0,
+      "Price": 48.0
+    },
+    {
+      "area": 3244.0,
+      "Price": 372.0
+    },
+    {
+      "area": 756.0,
+      "Price": 80.0
+    },
+    {
+      "area": 3339.0,
+      "Price": 315.0
+    },
+    {
+      "area": 4560.0,
+      "Price": 290.0
+    },
+    {
+      "area": 800.0,
+      "Price": 72.0
+    },
+    {
+      "area": 756.0,
+      "Price": 32.0
+    },
+    {
+      "area": 750.0,
+      "Price": 75.0
+    },
+    {
+      "area": 2243.0,
+      "Price": 348.0
+    },
+    {
+      "area": 2124.0,
+      "Price": 271.0
+    },
+    {
+      "area": 660.0,
+      "Price": 38.0
+    },
+    {
+      "area": 789.0,
+      "Price": 65.0
+    },
+    {
+      "area": 4053.0,
+      "Price": 492.0
+    },
+    {
+      "area": 655.0,
+      "Price": 45.2
+    },
+    {
+      "area": 3642.0,
+      "Price": 415.0
+    },
+    {
+      "area": 4000.0,
+      "Price": 475.0
+    },
+    {
+      "area": 675.0,
+      "Price": 61.0
+    },
+    {
+      "area": 530.0,
+      "Price": 45.0
+    },
+    {
+      "area": 740.0,
+      "Price": 45.0
+    },
+    {
+      "area": 2796.0,
+      "Price": 450.0
+    },
+    {
+      "area": 493.0,
+      "Price": 55.0
+    },
+    {
+      "area": 3254.0,
+      "Price": 300.0
+    },
+    {
+      "area": 2035.0,
+      "Price": 303.0
+    },
+    {
+      "area": 797.0,
+      "Price": 52.0
+    },
+    {
+      "area": 1859.0,
+      "Price": 265.0
+    },
+    {
+      "area": 1400.0,
+      "Price": 125.0
+    },
+    {
+      "area": 1287.0,
+      "Price": 96.6
+    },
+    {
+      "area": 649.0,
+      "Price": 48.0
+    },
+    {
+      "area": 967.0,
+      "Price": 54.0
+    },
+    {
+      "area": 1921.0,
+      "Price": 261.0
+    },
+    {
+      "area": 2710.0,
+      "Price": 317.0
+    },
+    {
+      "area": 1178.0,
+      "Price": 50.0
+    },
+    {
+      "area": 556.0,
+      "Price": 75.0
+    },
+    {
+      "area": 3307.0,
+      "Price": 299.0
+    },
+    {
+      "area": 837.0,
+      "Price": 35.0
+    },
+    {
+      "area": 700.0,
+      "Price": 35.0
+    },
+    {
+      "area": 3921.0,
+      "Price": 297.0
+    },
+    {
+      "area": 985.0,
+      "Price": 61.0
+    },
+    {
+      "area": 2271.0,
+      "Price": 227.0
+    },
+    {
+      "area": 4493.0,
+      "Price": 576.0
+    },
+    {
+      "area": 1080.0,
+      "Price": 80.0
+    },
+    {
+      "area": 4000.0,
+      "Price": 450.0
+    },
+    {
+      "area": 3308.0,
+      "Price": 571.0
+    },
+    {
+      "area": 2589.0,
+      "Price": 287.0
+    },
+    {
+      "area": 2326.0,
+      "Price": 279.0
+    },
+    {
+      "area": 1507.0,
+      "Price": 145.0
+    },
+    {
+      "area": 956.0,
+      "Price": 51.4
+    },
+    {
+      "area": 1989.0,
+      "Price": 130.0
+    },
+    {
+      "area": 1300.0,
+      "Price": 55.0
+    },
+    {
+      "area": 567.0,
+      "Price": 40.0
+    },
+    {
+      "area": 3024.0,
+      "Price": 277.0
+    },
+    {
+      "area": 4500.0,
+      "Price": 800.0
+    },
+    {
+      "area": 1553.0,
+      "Price": 127.0
+    },
+    {
+      "area": 3339.0,
+      "Price": 341.0
+    },
+    {
+      "area": 3273.0,
+      "Price": 362.0
+    },
+    {
+      "area": 882.0,
+      "Price": 55.0
+    },
+    {
+      "area": 1125.0,
+      "Price": 50.0
+    },
+    {
+      "area": 860.0,
+      "Price": 54.0
+    },
+    {
+      "area": 2996.0,
+      "Price": 260.0
+    },
+    {
+      "area": 1815.0,
+      "Price": 132.0
+    },
+    {
+      "area": 2148.0,
+      "Price": 293.0
+    },
+    {
+      "area": 2204.0,
+      "Price": 285.0
+    },
+    {
+      "area": 840.0,
+      "Price": 130.0
+    },
+    {
+      "area": 2325.0,
+      "Price": 350.0
+    },
+    {
+      "area": 1500.0,
+      "Price": 160.0
+    },
+    {
+      "area": 1875.0,
+      "Price": 164.0
+    },
+    {
+      "area": 5926.0,
+      "Price": 680.0
+    },
+    {
+      "area": 867.0,
+      "Price": 35.0
+    },
+    {
+      "area": 1467.0,
+      "Price": 150.0
+    },
+    {
+      "area": 3132.0,
+      "Price": 486.0
+    },
+    {
+      "area": 1947.0,
+      "Price": 130.0
+    },
+    {
+      "area": 2115.0,
+      "Price": 280.0
+    },
+    {
+      "area": 1100.0,
+      "Price": 68.0
+    },
+    {
+      "area": 1776.0,
+      "Price": 265.0
+    },
+    {
+      "area": 713.0,
+      "Price": 75.0
+    },
+    {
+      "area": 945.0,
+      "Price": 90.0
+    },
+    {
+      "area": 2327.0,
+      "Price": 287.0
+    },
+    {
+      "area": 968.0,
+      "Price": 82.0
+    },
+    {
+      "area": 1567.0,
+      "Price": 115.0
+    },
+    {
+      "area": 2559.0,
+      "Price": 399.0
+    },
+    {
+      "area": 1533.0,
+      "Price": 125.0
+    },
+    {
+      "area": 407.0,
+      "Price": 28.0
+    },
+    {
+      "area": 2088.0,
+      "Price": 297.0
+    },
+    {
+      "area": 700.0,
+      "Price": 53.0
+    },
+    {
+      "area": 2021.0,
+      "Price": 255.0
+    },
+    {
+      "area": 899.0,
+      "Price": 62.0
+    },
+    {
+      "area": 2625.0,
+      "Price": 311.0
+    },
+    {
+      "area": 741.0,
+      "Price": 65.0
+    },
+    {
+      "area": 3370.0,
+      "Price": 569.0
+    },
+    {
+      "area": 1060.0,
+      "Price": 98.0
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "BHK",
+      "importance": 0.5276
+    },
+    {
+      "feature": "Area_in_sqft",
+      "importance": 0.3924
+    },
+    {
+      "feature": "Area_Encoded",
+      "importance": 0.0464
+    },
+    {
+      "feature": "is_New_Property",
+      "importance": 0.0239
+    },
+    {
+      "feature": "is_Furnished",
+      "importance": 0.0058
+    },
+    {
+      "feature": "Relative_Floor_Level",
+      "importance": 0.0039
+    }
+  ],
+  "actual_vs_predicted": [
+    {
+      "actual": 140.0,
+      "pridicted": 128.92
+    },
+    {
+      "actual": 35.0,
+      "pridicted": 27.09
+    },
+    {
+      "actual": 225.0,
+      "pridicted": 143.09
+    },
+    {
+      "actual": 134.0,
+      "pridicted": 103.76
+    },
+    {
+      "actual": 110.0,
+      "pridicted": 129.59
+    },
+    {
+      "actual": 762.0,
+      "pridicted": 671.53
+    },
+    {
+      "actual": 49.5,
+      "pridicted": 40.72
+    },
+    {
+      "actual": 45.0,
+      "pridicted": 45.05
+    },
+    {
+      "actual": 130.0,
+      "pridicted": 204.0
+    },
+    {
+      "actual": 327.0,
+      "pridicted": 301.45
+    },
+    {
+      "actual": 40.0,
+      "pridicted": 41.55
+    },
+    {
+      "actual": 738.0,
+      "pridicted": 551.1
+    },
+    {
+      "actual": 49.9,
+      "pridicted": 44.84
+    },
+    {
+      "actual": 80.0,
+      "pridicted": 60.86
+    },
+    {
+      "actual": 610.0,
+      "pridicted": 551.43
+    },
+    {
+      "actual": 40.0,
+      "pridicted": 42.95
+    },
+    {
+      "actual": 145.0,
+      "pridicted": 175.53
+    },
+    {
+      "actual": 24.0,
+      "pridicted": 27.06
+    },
+    {
+      "actual": 121.0,
+      "pridicted": 77.89
+    },
+    {
+      "actual": 335.0,
+      "pridicted": 292.77
+    },
+    {
+      "actual": 533.0,
+      "pridicted": 509.99
+    },
+    {
+      "actual": 448.0,
+      "pridicted": 516.01
+    },
+    {
+      "actual": 569.0,
+      "pridicted": 499.94
+    },
+    {
+      "actual": 85.0,
+      "pridicted": 56.22
+    },
+    {
+      "actual": 125.0,
+      "pridicted": 118.6
+    },
+    {
+      "actual": 273.0,
+      "pridicted": 270.62
+    },
+    {
+      "actual": 38.0,
+      "pridicted": 47.26
+    },
+    {
+      "actual": 328.0,
+      "pridicted": 308.47
+    },
+    {
+      "actual": 55.0,
+      "pridicted": 39.38
+    },
+    {
+      "actual": 78.0,
+      "pridicted": 95.66
+    },
+    {
+      "actual": 49.3,
+      "pridicted": 49.59
+    },
+    {
+      "actual": 38.0,
+      "pridicted": 40.12
+    },
+    {
+      "actual": 172.0,
+      "pridicted": 206.88
+    },
+    {
+      "actual": 115.0,
+      "pridicted": 103.01
+    },
+    {
+      "actual": 688.0,
+      "pridicted": 659.87
+    },
+    {
+      "actual": 80.0,
+      "pridicted": 120.42
+    },
+    {
+      "actual": 398.0,
+      "pridicted": 584.09
+    },
+    {
+      "actual": 63.8,
+      "pridicted": 80.48
+    },
+    {
+      "actual": 121.0,
+      "pridicted": 156.65
+    },
+    {
+      "actual": 75.0,
+      "pridicted": 64.44
+    },
+    {
+      "actual": 48.0,
+      "pridicted": 55.27
+    },
+    {
+      "actual": 299.0,
+      "pridicted": 287.33
+    },
+    {
+      "actual": 100.0,
+      "pridicted": 227.08
+    },
+    {
+      "actual": 53.5,
+      "pridicted": 53.01
+    },
+    {
+      "actual": 396.0,
+      "pridicted": 357.8
+    },
+    {
+      "actual": 40.0,
+      "pridicted": 47.11
+    },
+    {
+      "actual": 70.0,
+      "pridicted": 74.75
+    },
+    {
+      "actual": 45.0,
+      "pridicted": 57.14
+    },
+    {
+      "actual": 104.0,
+      "pridicted": 126.47
+    },
+    {
+      "actual": 637.0,
+      "pridicted": 653.77
+    },
+    {
+      "actual": 611.0,
+      "pridicted": 592.09
+    },
+    {
+      "actual": 48.0,
+      "pridicted": 48.25
+    },
+    {
+      "actual": 53.0,
+      "pridicted": 43.35
+    },
+    {
+      "actual": 130.0,
+      "pridicted": 75.98
+    },
+    {
+      "actual": 450.0,
+      "pridicted": 471.63
+    },
+    {
+      "actual": 50.0,
+      "pridicted": 57.9
+    },
+    {
+      "actual": 100.0,
+      "pridicted": 91.03
+    },
+    {
+      "actual": 51.0,
+      "pridicted": 48.24
+    },
+    {
+      "actual": 151.0,
+      "pridicted": 214.75
+    },
+    {
+      "actual": 49.0,
+      "pridicted": 49.69
+    },
+    {
+      "actual": 541.0,
+      "pridicted": 479.52
+    },
+    {
+      "actual": 615.0,
+      "pridicted": 485.7
+    },
+    {
+      "actual": 317.0,
+      "pridicted": 304.36
+    },
+    {
+      "actual": 140.0,
+      "pridicted": 107.44
+    },
+    {
+      "actual": 30.0,
+      "pridicted": 25.97
+    },
+    {
+      "actual": 275.0,
+      "pridicted": 236.02
+    },
+    {
+      "actual": 280.0,
+      "pridicted": 322.88
+    },
+    {
+      "actual": 68.0,
+      "pridicted": 71.11
+    },
+    {
+      "actual": 90.0,
+      "pridicted": 80.81
+    },
+    {
+      "actual": 108.0,
+      "pridicted": 101.2
+    },
+    {
+      "actual": 31.0,
+      "pridicted": 49.56
+    },
+    {
+      "actual": 74.3,
+      "pridicted": 76.84
+    },
+    {
+      "actual": 62.0,
+      "pridicted": 48.56
+    },
+    {
+      "actual": 48.0,
+      "pridicted": 47.64
+    },
+    {
+      "actual": 105.0,
+      "pridicted": 141.53
+    },
+    {
+      "actual": 130.0,
+      "pridicted": 139.93
+    },
+    {
+      "actual": 275.0,
+      "pridicted": 259.85
+    },
+    {
+      "actual": 105.0,
+      "pridicted": 98.55
+    },
+    {
+      "actual": 140.0,
+      "pridicted": 139.67
+    },
+    {
+      "actual": 255.0,
+      "pridicted": 254.12
+    },
+    {
+      "actual": 50.0,
+      "pridicted": 57.36
+    },
+    {
+      "actual": 576.0,
+      "pridicted": 536.07
+    },
+    {
+      "actual": 774.0,
+      "pridicted": 767.35
+    },
+    {
+      "actual": 70.0,
+      "pridicted": 99.32
+    },
+    {
+      "actual": 293.0,
+      "pridicted": 299.13
+    },
+    {
+      "actual": 58.0,
+      "pridicted": 48.18
+    },
+    {
+      "actual": 45.0,
+      "pridicted": 68.14
+    },
+    {
+      "actual": 405.0,
+      "pridicted": 358.65
+    },
+    {
+      "actual": 105.0,
+      "pridicted": 182.97
+    },
+    {
+      "actual": 604.0,
+      "pridicted": 392.8
+    },
+    {
+      "actual": 60.0,
+      "pridicted": 52.83
+    },
+    {
+      "actual": 825.0,
+      "pridicted": 697.62
+    },
+    {
+      "actual": 65.0,
+      "pridicted": 117.94
+    },
+    {
+      "actual": 65.0,
+      "pridicted": 69.87
+    },
+    {
+      "actual": 275.0,
+      "pridicted": 223.82
+    },
+    {
+      "actual": 90.0,
+      "pridicted": 90.62
+    },
+    {
+      "actual": 65.0,
+      "pridicted": 57.5
+    },
+    {
+      "actual": 70.0,
+      "pridicted": 52.25
+    },
+    {
+      "actual": 575.0,
+      "pridicted": 543.75
+    },
+    {
+      "actual": 40.0,
+      "pridicted": 53.04
+    },
+    {
+      "actual": 804.0,
+      "pridicted": 631.74
+    },
+    {
+      "actual": 120.0,
+      "pridicted": 103.85
+    },
+    {
+      "actual": 155.0,
+      "pridicted": 106.72
+    },
+    {
+      "actual": 28.0,
+      "pridicted": 35.44
+    },
+    {
+      "actual": 12.0,
+      "pridicted": 22.6
+    },
+    {
+      "actual": 75.0,
+      "pridicted": 76.82
+    },
+    {
+      "actual": 539.0,
+      "pridicted": 493.16
+    },
+    {
+      "actual": 72.0,
+      "pridicted": 111.07
+    },
+    {
+      "actual": 318.0,
+      "pridicted": 391.96
+    },
+    {
+      "actual": 160.0,
+      "pridicted": 322.97
+    },
+    {
+      "actual": 279.0,
+      "pridicted": 339.64
+    },
+    {
+      "actual": 165.0,
+      "pridicted": 163.55
+    },
+    {
+      "actual": 344.0,
+      "pridicted": 308.42
+    },
+    {
+      "actual": 132.0,
+      "pridicted": 114.23
+    },
+    {
+      "actual": 45.0,
+      "pridicted": 55.37
+    },
+    {
+      "actual": 459.0,
+      "pridicted": 505.2
+    },
+    {
+      "actual": 351.0,
+      "pridicted": 322.76
+    },
+    {
+      "actual": 50.0,
+      "pridicted": 48.77
+    },
+    {
+      "actual": 140.0,
+      "pridicted": 126.52
+    },
+    {
+      "actual": 44.0,
+      "pridicted": 54.19
+    },
+    {
+      "actual": 79.0,
+      "pridicted": 68.4
+    },
+    {
+      "actual": 225.0,
+      "pridicted": 149.19
+    },
+    {
+      "actual": 554.0,
+      "pridicted": 577.41
+    },
+    {
+      "actual": 50.0,
+      "pridicted": 59.71
+    },
+    {
+      "actual": 429.0,
+      "pridicted": 515.2
+    },
+    {
+      "actual": 13.0,
+      "pridicted": 19.74
+    },
+    {
+      "actual": 672.0,
+      "pridicted": 594.46
+    },
+    {
+      "actual": 197.0,
+      "pridicted": 223.42
+    },
+    {
+      "actual": 421.0,
+      "pridicted": 359.11
+    },
+    {
+      "actual": 115.0,
+      "pridicted": 119.83
+    },
+    {
+      "actual": 130.0,
+      "pridicted": 129.17
+    },
+    {
+      "actual": 26.5,
+      "pridicted": 31.81
+    },
+    {
+      "actual": 43.4,
+      "pridicted": 44.37
+    },
+    {
+      "actual": 68.0,
+      "pridicted": 60.25
+    },
+    {
+      "actual": 61.0,
+      "pridicted": 72.28
+    },
+    {
+      "actual": 350.0,
+      "pridicted": 302.06
+    },
+    {
+      "actual": 52.0,
+      "pridicted": 41.99
+    },
+    {
+      "actual": 58.0,
+      "pridicted": 65.71
+    },
+    {
+      "actual": 98.0,
+      "pridicted": 101.92
+    },
+    {
+      "actual": 350.0,
+      "pridicted": 313.67
+    },
+    {
+      "actual": 50.0,
+      "pridicted": 51.14
+    },
+    {
+      "actual": 393.0,
+      "pridicted": 468.16
+    },
+    {
+      "actual": 665.0,
+      "pridicted": 638.68
+    },
+    {
+      "actual": 270.0,
+      "pridicted": 210.21
+    },
+    {
+      "actual": 110.0,
+      "pridicted": 76.12
+    },
+    {
+      "actual": 670.0,
+      "pridicted": 672.36
+    },
+    {
+      "actual": 39.0,
+      "pridicted": 41.94
+    },
+    {
+      "actual": 65.0,
+      "pridicted": 47.56
+    },
+    {
+      "actual": 299.0,
+      "pridicted": 309.49
+    },
+    {
+      "actual": 350.0,
+      "pridicted": 324.2
+    }
+  ]
+}
