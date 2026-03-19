@@ -186,7 +186,7 @@ const CompareModels: React.FC = () => {
 
   if (loading)
     return (
-      <AppShell dashboard mainBg={BG}>
+      <AppShell dashboard>
         <div
           className="flex-1 flex items-center justify-center"
           style={{ background: BG }}
@@ -212,7 +212,7 @@ const CompareModels: React.FC = () => {
 
   if (error)
     return (
-      <AppShell dashboard mainBg={BG}>
+      <AppShell dashboard>
         <div
           className="flex-1 flex items-center justify-center"
           style={{ background: BG }}
@@ -321,7 +321,7 @@ const CompareModels: React.FC = () => {
   );
 
   return (
-    <AppShell dashboard mainBg={BG}>
+    <AppShell dashboard>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
         .cm-root * { box-sizing: border-box; }

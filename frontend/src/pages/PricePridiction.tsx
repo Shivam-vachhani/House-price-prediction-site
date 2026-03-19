@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 
 import AppShell from "../components/AppShell";
 import HeroSection from "../components/Herosection";
@@ -55,6 +55,15 @@ const PricePrediction = () => {
     return Object.keys(e).length === 0;
   };
 
+  const secondSectionRef = useRef<HTMLDivElement>(null);
+
+  const ScrollToSection = () => {
+    secondSectionRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const runPrediction = () => {
     if (!validate()) return;
     const sqft = parseInt(area);
@@ -94,36 +103,39 @@ const PricePrediction = () => {
   // No dashboard prop → <main> uses overflow-y-auto, page scrolls freely
   return (
     <AppShell>
-      <HeroSection />
+      <HeroSection onTryPredictClick={ScrollToSection} />
       <div className="px-4 sm:px-8 lg:px-12 py-7 sm:py-10 flex-1 bg-white">
-        <div className="mb-5 sm:mb-7">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
-            What we are offering
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-400 mt-1">
-            Fill in all property details below to generate an AI-powered price
-            estimate
-          </p>
+        <div ref={secondSectionRef}>
+          <div className="mb-5 sm:mb-7">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
+              What we are offering
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-400 mt-1">
+              Fill in all property details below to generate an AI-powered price
+              estimate
+            </p>
+          </div>
+
+          <PredictionForm
+            location={location}
+            setLocation={setLocation}
+            area={area}
+            setArea={setArea}
+            bhk={bhk}
+            setBhk={setBhk}
+            furnishing={furnishing}
+            setFurnishing={setFurnishing}
+            isNewFlat={isNewFlat}
+            setIsNewFlat={setIsNewFlat}
+            floorNo={floorNo}
+            setFloorNo={setFloorNo}
+            totalFloors={totalFloors}
+            setTotalFloors={setTotalFloors}
+            errors={errors}
+            setErrors={setErrors}
+            onSubmit={runPrediction}
+          />
         </div>
-        <PredictionForm
-          location={location}
-          setLocation={setLocation}
-          area={area}
-          setArea={setArea}
-          bhk={bhk}
-          setBhk={setBhk}
-          furnishing={furnishing}
-          setFurnishing={setFurnishing}
-          isNewFlat={isNewFlat}
-          setIsNewFlat={setIsNewFlat}
-          floorNo={floorNo}
-          setFloorNo={setFloorNo}
-          totalFloors={totalFloors}
-          setTotalFloors={setTotalFloors}
-          errors={errors}
-          setErrors={setErrors}
-          onSubmit={runPrediction}
-        />
         {result && (
           <ResultPanel
             result={result}

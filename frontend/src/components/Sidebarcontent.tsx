@@ -174,7 +174,7 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
       {/* ── Kaggle footer ── */}
       <div className="mt-auto px-3 pt-4 border-t border-gray-100">
         <a
-          href="https://www.kaggle.com"
+          href="https://www.kaggle.com/datasets/prayeshgodhani04/ahmedabad-flat-price-dataset-uncleaned"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2.5 px-2.5 py-2.5 rounded-lg hover:bg-gray-50 transition-all group"

@@ -39,12 +39,14 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
   useEffect(() => {
     const lastInner = new WeakMap<Element, number>();
     const onCapture = (e: Event) => {
+      // Ensure the event target is an Element (not Document) before comparing
+      if (!(e.target instanceof Element)) return;
       const t = e.target as Element;
       if (
         !t ||
         t === mainRef.current ||
-        t === document ||
-        t === document.documentElement
+        t === document.documentElement ||
+        t === document.body
       )
         return;
       const curr = (t as HTMLElement).scrollTop ?? 0;

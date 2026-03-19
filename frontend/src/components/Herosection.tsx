@@ -2,7 +2,11 @@ import React from "react";
 import assets from "../assets/assets";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => (
+interface HeroSectionProps {
+  onTryPredictClick?: () => void;
+}
+
+const HeroSection = ({ onTryPredictClick }: HeroSectionProps) => (
   <div className="relative h-[280px] sm:h-[340px] lg:h-[380px] w-full bg-gradient-to-r from-[#6E83B2] to-[#96A7C5] text-white flex items-center overflow-hidden flex-shrink-0">
     <div className="ml-6 sm:ml-10 lg:ml-14 z-10 max-w-[55%] sm:max-w-[50%]">
       <p className="text-[10px] sm:text-xs tracking-widest uppercase text-white/60 mb-2">
@@ -19,7 +23,10 @@ const HeroSection = () => (
         overfitting.
       </p>
       <div className="flex flex-col md:flex-row  gap-2 sm:gap-3 mt-4 sm:mt-6">
-        <button className="bg-white text-[#6E83B2] text-xs sm:text-sm font-semibold px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer w-29 lg:w-32">
+        <button
+          onClick={onTryPredictClick}
+          className="bg-white text-[#6E83B2] text-xs sm:text-sm font-semibold px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer w-29 lg:w-32"
+        >
           Try Prediction
         </button>
         <Link to="/compare">
