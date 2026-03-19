@@ -162,7 +162,7 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
                 </svg>
               </div>
               <span className="text-[15px] font-bold text-gray-800">
-                EstateIQ
+                NivasIQ
               </span>
             </div>
             <button

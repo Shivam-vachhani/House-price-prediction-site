@@ -88,7 +88,7 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
           </div>
           <div>
             <p className="text-[15px] font-bold text-gray-800 tracking-tight">
-              EstateIQ
+              NivasIQ
             </p>
             <p className="text-[10px] text-gray-400 tracking-widest">
               PRICE INTELLIGENCE
