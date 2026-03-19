@@ -13,6 +13,14 @@ import {
   PieChart,
   Pie,
 } from "recharts";
+import {
+  IndianRupee,
+  Ruler,
+  Building2,
+  MapPin,
+  TrendingUp,
+  AlertTriangle,
+} from "lucide-react";
 import SidebarContent from "../components/Sidebarcontent";
 import type { MarketData } from "../lib/interface";
 
@@ -102,20 +110,25 @@ const HIST_C = [
   "#be185d",
 ];
 
-const KPI_CFG = [
-  { label: "Avg Price", color: ACCENT, icon: "₹", bg: "#eef0fa" },
-  { label: "Price/sq ft", color: TEAL, icon: "⊡", bg: "#ecfdf5" },
-  { label: "Listings", color: AMBER, icon: "⊟", bg: "#fffbeb" },
-  { label: "Top Area", color: VIOLET, icon: "⊛", bg: "#f5f3ff" },
+const KPI_CFG: {
+  label: string;
+  color: string;
+  Icon: React.FC<{ size?: number; color?: string; strokeWidth?: number }>;
+  bg: string;
+}[] = [
+  { label: "Avg Price", color: ACCENT, Icon: IndianRupee, bg: "#eef0fa" },
+  { label: "Price/sq ft", color: TEAL, Icon: Ruler, bg: "#ecfdf5" },
+  { label: "Listings", color: AMBER, Icon: Building2, bg: "#fffbeb" },
+  { label: "Top Area", color: VIOLET, Icon: MapPin, bg: "#f5f3ff" },
 ];
 
 const tip: React.CSSProperties = {
   background: "#1e293b",
   border: "none",
-  borderRadius: 7,
+  borderRadius: 8,
   color: "#f1f5f9",
-  fontSize: 11,
-  padding: "7px 10px",
+  fontSize: 12,
+  padding: "8px 12px",
 };
 
 // ════════════════════════════════════════════
@@ -160,7 +173,7 @@ const MarketTrends: React.FC = () => {
                 margin: "0 auto 12px",
               }}
             />
-            <div style={{ fontSize: 13, color: MUT }}>Loading market data…</div>
+            <div style={{ fontSize: 14, color: MUT }}>Loading market data…</div>
           </div>
         </main>
       </div>
@@ -175,7 +188,20 @@ const MarketTrends: React.FC = () => {
         </aside>
         <main className="flex-1 flex items-center justify-center bg-[#f0f2f8]">
           <div className="text-center p-6">
-            <div style={{ fontSize: 40, marginBottom: 12 }}>⚠️</div>
+            <div
+              style={{
+                width: 52,
+                height: 52,
+                background: "#fff7ed",
+                borderRadius: 14,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 12px",
+              }}
+            >
+              <AlertTriangle size={26} color="#d97706" strokeWidth={2} />
+            </div>
             <p
               style={{
                 fontSize: 14,
@@ -186,13 +212,13 @@ const MarketTrends: React.FC = () => {
             >
               Failed to load market data
             </p>
-            <p style={{ fontSize: 12, color: MUT, marginBottom: 14 }}>
+            <p style={{ fontSize: 13, color: MUT, marginBottom: 14 }}>
               {error}
             </p>
             {!API_URL && (
               <p
                 style={{
-                  fontSize: 11,
+                  fontSize: 13,
                   background: "#fef9c3",
                   color: "#854d0e",
                   padding: "6px 12px",
@@ -211,7 +237,7 @@ const MarketTrends: React.FC = () => {
                 border: "none",
                 borderRadius: 8,
                 padding: "8px 20px",
-                fontSize: 13,
+                fontSize: 14,
                 cursor: "pointer",
               }}
             >
@@ -231,6 +257,11 @@ const MarketTrends: React.FC = () => {
         .split(" ")
         .map((w) => w[0].toUpperCase() + w.slice(1))
         .join(" "),
+      localityShort: l
+        .split(" ")
+        .map((w) => w[0].toUpperCase() + w.slice(1))
+        .join(" ")
+        .slice(0, 14),
       avg: Number(avg),
     }))
     .sort((a, b) => b.avg - a.avg)
@@ -375,12 +406,12 @@ const MarketTrends: React.FC = () => {
               <span style={{ fontSize: 14, fontWeight: 700, color: TXT }}>
                 Market Trends
               </span>
-              <span style={{ fontSize: 11, color: MUT, marginLeft: 8 }}>
+              <span style={{ fontSize: 13, color: MUT, marginLeft: 8 }}>
                 Ahmedabad 2025–26
               </span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <span style={{ fontSize: 11, color: MUT }}>
+              <span style={{ fontSize: 13, color: MUT }}>
                 XGBoost · R² = 0.90
               </span>
               <div
@@ -392,7 +423,7 @@ const MarketTrends: React.FC = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 11,
+                  fontSize: 13,
                   color: ACCENT,
                   fontWeight: 700,
                 }}
@@ -428,12 +459,12 @@ const MarketTrends: React.FC = () => {
                   style={{
                     background: CARD,
                     borderRadius: 12,
-                    padding: "12px 14px",
+                    padding: "14px 16px",
                     borderLeft: `4px solid ${k.color}`,
                     boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
                     display: "flex",
                     flexDirection: "column",
-                    gap: 3,
+                    gap: 4,
                   }}
                 >
                   <div
@@ -445,7 +476,7 @@ const MarketTrends: React.FC = () => {
                   >
                     <span
                       style={{
-                        fontSize: 10,
+                        fontSize: 12,
                         fontWeight: 600,
                         color: MUT,
                         textTransform: "uppercase" as const,
@@ -456,18 +487,17 @@ const MarketTrends: React.FC = () => {
                     </span>
                     <span
                       style={{
-                        fontSize: 15,
                         background: k.bg,
-                        width: 27,
-                        height: 27,
-                        borderRadius: 7,
+                        width: 30,
+                        height: 30,
+                        borderRadius: 8,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         flexShrink: 0,
                       }}
                     >
-                      {k.icon}
+                      <k.Icon size={15} color={k.color} strokeWidth={2} />
                     </span>
                   </div>
                   <div
@@ -481,7 +511,7 @@ const MarketTrends: React.FC = () => {
                     {kpiValues[i]}
                   </div>
                   <div
-                    style={{ fontSize: 10, color: k.color, fontWeight: 500 }}
+                    style={{ fontSize: 12, color: k.color, fontWeight: 500 }}
                   >
                     {["all listings", "city avg", "2025–26", "most listed"][i]}
                   </div>
@@ -495,9 +525,10 @@ const MarketTrends: React.FC = () => {
                 flex: isSmall ? "unset" : 1,
                 display: "grid",
                 gridTemplateColumns: chartCols,
-                gridTemplateRows: isSmall ? "auto" : "1fr 1fr",
+                gridTemplateRows: isSmall ? "auto" : "290px 260px",
                 gap: 10,
                 minHeight: 0,
+                overflow: isSmall ? "visible" : "hidden",
               }}
             >
               {/* Locality Bar */}
@@ -509,7 +540,7 @@ const MarketTrends: React.FC = () => {
                   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                   display: "flex",
                   flexDirection: "column",
-                  minHeight: isMobile ? 260 : isTablet ? 280 : "auto",
+                  height: "100%",
                 }}
               >
                 <div
@@ -522,10 +553,10 @@ const MarketTrends: React.FC = () => {
                   }}
                 >
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: TXT }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: TXT }}>
                       Avg Price by Locality
                     </div>
-                    <div style={{ fontSize: 10, color: MUT }}>
+                    <div style={{ fontSize: 12, color: MUT }}>
                       Top 8 areas · click to highlight
                     </div>
                   </div>
@@ -533,7 +564,7 @@ const MarketTrends: React.FC = () => {
                     style={{
                       background: ACCS,
                       color: ACCENT,
-                      fontSize: 10,
+                      fontSize: 12,
                       fontWeight: 600,
                       padding: "2px 8px",
                       borderRadius: 99,
@@ -542,18 +573,15 @@ const MarketTrends: React.FC = () => {
                     Top 8
                   </span>
                 </div>
-                <div style={{ flex: 1, minHeight: 0 }}>
-                  <ResponsiveContainer
-                    width="100%"
-                    height={isMobile ? 200 : isTablet ? 220 : "100%"}
-                  >
+                <div style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
+                  <ResponsiveContainer width="100%" height="130%">
                     <BarChart
                       data={locData}
                       margin={{
                         top: 2,
                         right: 4,
                         left: -8,
-                        bottom: isMobile ? 50 : 55,
+                        bottom: isMobile ? 55 : 65,
                       }}
                     >
                       <CartesianGrid
@@ -562,21 +590,21 @@ const MarketTrends: React.FC = () => {
                         vertical={false}
                       />
                       <XAxis
-                        dataKey="locality"
-                        tick={{ fontSize: 9, fill: MUT }}
+                        dataKey="localityShort"
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
-                        angle={-35}
+                        angle={-40}
                         textAnchor="end"
                         interval={0}
-                        height={60}
+                        height={75}
                       />
                       <YAxis
-                        tick={{ fontSize: 9, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
                         tickFormatter={(v) => fmtPs(v)}
-                        width={46}
+                        width={52}
                       />
                       <Tooltip
                         cursor={{ fill: "rgba(91,110,168,0.08)" }}
@@ -629,7 +657,7 @@ const MarketTrends: React.FC = () => {
                       style={{
                         background: ACCS,
                         color: ACCENT,
-                        fontSize: 10,
+                        fontSize: 12,
                         fontWeight: 600,
                         padding: "2px 8px",
                         borderRadius: 99,
@@ -643,7 +671,7 @@ const MarketTrends: React.FC = () => {
                     <button
                       onClick={() => setActiveLoc(null)}
                       style={{
-                        fontSize: 10,
+                        fontSize: 12,
                         color: MUT,
                         background: "none",
                         border: "none",
@@ -666,12 +694,12 @@ const MarketTrends: React.FC = () => {
                   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                   display: "flex",
                   flexDirection: "column",
-                  minHeight: isMobile ? 240 : isTablet ? 240 : "auto",
+                  height: "100%",
                 }}
               >
                 <div
                   style={{
-                    fontSize: 12,
+                    fontSize: 13,
                     fontWeight: 700,
                     color: TXT,
                     marginBottom: 2,
@@ -679,7 +707,7 @@ const MarketTrends: React.FC = () => {
                 >
                   Median Price by BHK
                 </div>
-                <div style={{ fontSize: 10, color: MUT, marginBottom: 8 }}>
+                <div style={{ fontSize: 12, color: MUT, marginBottom: 8 }}>
                   Per bedroom config
                 </div>
                 <div
@@ -761,7 +789,7 @@ const MarketTrends: React.FC = () => {
                           />
                           <span
                             style={{
-                              fontSize: 11,
+                              fontSize: 13,
                               color: TXT,
                               fontWeight: 500,
                             }}
@@ -770,7 +798,7 @@ const MarketTrends: React.FC = () => {
                           </span>
                         </div>
                         <span
-                          style={{ fontSize: 11, fontWeight: 700, color: MUT }}
+                          style={{ fontSize: 13, fontWeight: 700, color: MUT }}
                         >
                           {fmtP(b.value)}
                         </span>
@@ -789,7 +817,8 @@ const MarketTrends: React.FC = () => {
                   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                   display: "flex",
                   flexDirection: "column",
-                  minHeight: isMobile ? 260 : isTablet ? 260 : "auto",
+                  height: "100%",
+                  overflow: "hidden",
                 }}
               >
                 <div
@@ -801,7 +830,7 @@ const MarketTrends: React.FC = () => {
                     flexShrink: 0,
                   }}
                 >
-                  <div style={{ fontSize: 12, fontWeight: 700, color: TXT }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: TXT }}>
                     Feature Importance
                   </div>
                   <span
@@ -809,7 +838,7 @@ const MarketTrends: React.FC = () => {
                       background: ACCENT + "18",
                       color: ACCENT,
                       border: `1px solid ${ACCENT}33`,
-                      fontSize: 10,
+                      fontSize: 12,
                       fontWeight: 600,
                       padding: "2px 8px",
                       borderRadius: 99,
@@ -832,12 +861,12 @@ const MarketTrends: React.FC = () => {
                 >
                   <div>
                     <div
-                      style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}
+                      style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}
                     >
                       {featData[0]?.feature}
                     </div>
                     <div
-                      style={{ fontSize: 10, color: "rgba(255,255,255,0.65)" }}
+                      style={{ fontSize: 12, color: "rgba(255,255,255,0.65)" }}
                     >
                       top driver
                     </div>
@@ -859,7 +888,7 @@ const MarketTrends: React.FC = () => {
                     flexShrink: 0,
                   }}
                 >
-                  <div style={{ fontSize: 11, fontWeight: 600, color: TXT }}>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: TXT }}>
                     {featData[1]?.feature}
                   </div>
                   <div style={{ fontSize: 17, fontWeight: 700, color: TEAL }}>
@@ -879,9 +908,9 @@ const MarketTrends: React.FC = () => {
                     >
                       <span
                         style={{
-                          fontSize: 10,
+                          fontSize: 12,
                           color: TXT,
-                          width: 100,
+                          width: 120,
                           flexShrink: 0,
                           overflow: "hidden",
                           textOverflow: "ellipsis",
@@ -910,7 +939,7 @@ const MarketTrends: React.FC = () => {
                       </div>
                       <span
                         style={{
-                          fontSize: 10,
+                          fontSize: 12,
                           fontWeight: 600,
                           color: MUT,
                           width: 32,
@@ -933,7 +962,7 @@ const MarketTrends: React.FC = () => {
                 >
                   <p
                     style={{
-                      fontSize: 10,
+                      fontSize: 12,
                       color: ACCENT,
                       margin: 0,
                       fontWeight: 500,
@@ -961,7 +990,7 @@ const MarketTrends: React.FC = () => {
                   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                   display: "flex",
                   flexDirection: "column",
-                  minHeight: isMobile ? 240 : isTablet ? 240 : "auto",
+                  height: "100%",
                 }}
               >
                 <div
@@ -974,10 +1003,10 @@ const MarketTrends: React.FC = () => {
                   }}
                 >
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: TXT }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: TXT }}>
                       Price Distribution
                     </div>
-                    <div style={{ fontSize: 10, color: MUT }}>
+                    <div style={{ fontSize: 12, color: MUT }}>
                       Listings per price bracket
                     </div>
                   </div>
@@ -986,7 +1015,7 @@ const MarketTrends: React.FC = () => {
                       background: ACCENT + "18",
                       color: ACCENT,
                       border: `1px solid ${ACCENT}33`,
-                      fontSize: 10,
+                      fontSize: 12,
                       fontWeight: 600,
                       padding: "2px 8px",
                       borderRadius: 99,
@@ -995,18 +1024,15 @@ const MarketTrends: React.FC = () => {
                     {data.kpis.total_listings.toLocaleString()} total
                   </span>
                 </div>
-                <div style={{ flex: 1, minHeight: 0 }}>
-                  <ResponsiveContainer
-                    width="100%"
-                    height={isMobile ? 170 : isTablet ? 180 : "100%"}
-                  >
+                <div style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
+                  <ResponsiveContainer width="100%" height="130%">
                     <BarChart
                       data={data.histogram}
                       margin={{
                         top: 2,
                         right: 4,
-                        left: -12,
-                        bottom: isMobile ? 44 : 50,
+                        left: -8,
+                        bottom: isMobile ? 50 : 58,
                       }}
                     >
                       <CartesianGrid
@@ -1016,21 +1042,22 @@ const MarketTrends: React.FC = () => {
                       />
                       <XAxis
                         dataKey="range"
-                        tick={{ fontSize: 8, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
-                        angle={-30}
+                        angle={-35}
                         textAnchor="end"
                         interval={0}
-                        height={55}
+                        height={68}
                       />
                       <YAxis
-                        tick={{ fontSize: 9, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
                         tickFormatter={(v) =>
                           v >= 1000 ? `${(v / 1000).toFixed(1)}k` : `${v}`
                         }
+                        width={36}
                       />
                       <Tooltip
                         cursor={{ fill: "rgba(91,110,168,0.08)" }}
@@ -1065,12 +1092,12 @@ const MarketTrends: React.FC = () => {
                   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                   display: "flex",
                   flexDirection: "column",
-                  minHeight: isMobile ? 220 : isTablet ? 220 : "auto",
+                  height: "100%",
                 }}
               >
                 <div
                   style={{
-                    fontSize: 12,
+                    fontSize: 13,
                     fontWeight: 700,
                     color: TXT,
                     marginBottom: 2,
@@ -1081,45 +1108,36 @@ const MarketTrends: React.FC = () => {
                 </div>
                 <div
                   style={{
-                    fontSize: 10,
+                    fontSize: 12,
                     color: MUT,
                     marginBottom: 8,
                     flexShrink: 0,
                   }}
                 >
-                  Each dot = one listing
+                  X = area (sq ft) · Y = price · teal = above ₹1Cr
                 </div>
-                <div style={{ flex: 1, minHeight: 0 }}>
-                  <ResponsiveContainer
-                    width="100%"
-                    height={isMobile ? 155 : isTablet ? 165 : "100%"}
-                  >
+                <div style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
+                  <ResponsiveContainer width="100%" height="100%">
                     <ScatterChart
-                      margin={{ top: 2, right: 4, left: -12, bottom: 16 }}
+                      margin={{ top: 4, right: 8, left: 0, bottom: 6 }}
                     >
                       <CartesianGrid strokeDasharray="3 3" stroke={BOR} />
                       <XAxis
                         dataKey="area"
                         type="number"
-                        tick={{ fontSize: 9, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
-                        label={{
-                          value: "sq ft",
-                          position: "insideBottom",
-                          offset: -4,
-                          fontSize: 9,
-                          fill: MUT,
-                        }}
                       />
                       <YAxis
                         dataKey="price"
                         type="number"
-                        tick={{ fontSize: 9, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
                         tickFormatter={(v) => fmtPs(v)}
                         domain={[0, scatMax]}
+                        width={52}
                       />
                       <Tooltip
                         cursor={{ strokeDasharray: "3 3" }}
@@ -1163,7 +1181,7 @@ const MarketTrends: React.FC = () => {
                         display: "flex",
                         alignItems: "center",
                         gap: 4,
-                        fontSize: 9,
+                        fontSize: 12,
                         color: MUT,
                       }}
                     >
@@ -1191,7 +1209,7 @@ const MarketTrends: React.FC = () => {
                   boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                   display: "flex",
                   flexDirection: "column",
-                  minHeight: isMobile ? 220 : isTablet ? 220 : "auto",
+                  height: "100%",
                 }}
               >
                 <div
@@ -1204,11 +1222,11 @@ const MarketTrends: React.FC = () => {
                   }}
                 >
                   <div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: TXT }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: TXT }}>
                       Actual vs Predicted
                     </div>
-                    <div style={{ fontSize: 10, color: MUT }}>
-                      Model accuracy
+                    <div style={{ fontSize: 12, color: MUT }}>
+                      X = actual · Y = predicted · closer to diagonal = better
                     </div>
                   </div>
                   <span
@@ -1216,7 +1234,7 @@ const MarketTrends: React.FC = () => {
                       background: EMERALD + "18",
                       color: EMERALD,
                       border: `1px solid ${EMERALD}33`,
-                      fontSize: 10,
+                      fontSize: 12,
                       fontWeight: 600,
                       padding: "2px 8px",
                       borderRadius: 99,
@@ -1225,47 +1243,30 @@ const MarketTrends: React.FC = () => {
                     R²=0.90
                   </span>
                 </div>
-                <div style={{ flex: 1, minHeight: 0 }}>
-                  <ResponsiveContainer
-                    width="100%"
-                    height={isMobile ? 155 : isTablet ? 165 : "100%"}
-                  >
+                <div style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
+                  <ResponsiveContainer width="100%" height="100%">
                     <ScatterChart
-                      margin={{ top: 2, right: 4, left: -12, bottom: 16 }}
+                      margin={{ top: 4, right: 8, left: 0, bottom: 6 }}
                     >
                       <CartesianGrid strokeDasharray="3 3" stroke={BOR} />
                       <XAxis
                         dataKey="actual"
                         type="number"
-                        tick={{ fontSize: 9, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
                         tickFormatter={(v) => fmtPs(v)}
                         domain={[0, avpMax]}
-                        label={{
-                          value: "actual",
-                          position: "insideBottom",
-                          offset: -4,
-                          fontSize: 9,
-                          fill: MUT,
-                        }}
                       />
                       <YAxis
                         dataKey="predicted"
                         type="number"
-                        tick={{ fontSize: 9, fill: MUT }}
+                        tick={{ fontSize: 11, fill: MUT }}
                         axisLine={false}
                         tickLine={false}
                         tickFormatter={(v) => fmtPs(v)}
                         domain={[0, avpMax]}
-                        label={{
-                          value: "predicted",
-                          angle: -90,
-                          position: "insideLeft",
-                          offset: 18,
-                          fontSize: 9,
-                          fill: MUT,
-                        }}
+                        width={52}
                       />
                       <Tooltip
                         content={({ active, payload }: any) => {
@@ -1325,7 +1326,7 @@ const MarketTrends: React.FC = () => {
                         display: "flex",
                         alignItems: "center",
                         gap: 4,
-                        fontSize: 9,
+                        fontSize: 12,
                         color: MUT,
                       }}
                     >
