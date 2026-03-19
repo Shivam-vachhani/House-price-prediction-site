@@ -1,5 +1,6 @@
 import React from "react";
 import assets from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => (
   <div className="relative h-[280px] sm:h-[340px] lg:h-[380px] w-full bg-gradient-to-r from-[#6E83B2] to-[#96A7C5] text-white flex items-center overflow-hidden flex-shrink-0">
@@ -17,17 +18,19 @@ const HeroSection = () => (
         Achieves an R² of 0.90 and a test score of 94.39% with minimal
         overfitting.
       </p>
-      <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
-        <button className="bg-white text-[#6E83B2] text-xs sm:text-sm font-semibold px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+      <div className="flex flex-col md:flex-row  gap-2 sm:gap-3 mt-4 sm:mt-6">
+        <button className="bg-white text-[#6E83B2] text-xs sm:text-sm font-semibold px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer w-29 lg:w-32">
           Try Prediction
         </button>
-        <button className="border border-white/40 text-white text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
-          View Model Stats
-        </button>
+        <Link to="/compare">
+          <button className="border border-white/40 text-white text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+            View Model Stats
+          </button>
+        </Link>
       </div>
     </div>
     <img
-      className="absolute right-0 lg:top-1/2 bottom-[-50px] -translate-y-1/3 w-[55%] sm:w-[55%] lg:w-[600px] drop-shadow-2xl"
+      className="absolute right-0 lg:top-1/2 bottom-[-50px] md:-translate-y-[48%]  -translate-y-[28%] w-[55%] sm:w-[55%] lg:w-[600px] drop-shadow-2xl"
       src={assets.houseimge}
       alt="house_image"
     />

@@ -66,8 +66,8 @@ const MODEL_CARDS = [
     title: "MAE ₹35L · RMSE ₹60L",
     desc: "On average, predictions deviate by ₹35 Lakhs from actual sale prices — reasonable for a market with properties ranging from ₹30L to ₹10Cr+. RMSE of ₹60L reflects sensitivity to high-end outliers.",
     stats: [
-      { label: "MAE", value: "₹35 Lacs" },
-      { label: "RMSE", value: "₹60 Lacs" },
+      { label: "MAE", value: "₹35 Lakhs" },
+      { label: "RMSE", value: "₹60 Lakhs" },
     ],
   },
 ];

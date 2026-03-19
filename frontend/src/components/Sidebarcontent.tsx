@@ -73,13 +73,17 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
       {/* ── Logo ── */}
       <div className="px-5 pb-6 border-b border-gray-100 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-[#6E83B2] rounded-lg flex items-center justify-center">
-            <svg viewBox="0 0 18 18" fill="none" className="w-4 h-4">
-              <path
-                d="M2 9L9 2L16 9V16H11V12H7V16H2V9Z"
-                stroke="white"
-                strokeWidth="1.5"
-              />
+          <div className="w-12 h-12 bg-[#6E83B2] rounded-full flex items-center justify-center">
+            <svg
+              width="85%"
+              viewBox="0 0 680 500"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon points="340,60 120,245 560,245" fill="white" />
+              <rect x="430" y="98" width="72" height="95" fill="white" />
+              <rect x="428" y="88" width="82" height="22" fill="white" />
+              <rect x="158" y="235" width="364" height="205" fill="white" />
+              <rect x="270" y="330" width="140" height="120" fill="#6E83B2" />
             </svg>
           </div>
           <div>
