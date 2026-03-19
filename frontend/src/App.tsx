@@ -3,6 +3,7 @@ import "./App.css";
 import PricePridiction from "./pages/PricePridiction";
 import MarketTrends from "./pages/MarketTrends";
 import CompareModels from "./pages/CompareModels";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           {/* Fallback for 404 - Not Found */}
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>
+        <Analytics />
       </BrowserRouter>
     </>
   );
