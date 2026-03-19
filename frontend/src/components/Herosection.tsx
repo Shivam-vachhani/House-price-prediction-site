@@ -36,7 +36,7 @@ const HeroSection = ({ onTryPredictClick }: HeroSectionProps) => (
       </div>
     </div>
     <img
-      className="absolute right-0 lg:top-1/2 bottom-[-50px] md:-translate-y-[48%]  -translate-y-[28%] w-[55%] sm:w-[55%] lg:w-[600px] drop-shadow-2xl"
+      className="absolute right-0 lg:top-1/2 bottom-[-50px] md:-translate-y-[38%]  -translate-y-[42%] w-[55%] sm:w-[55%] lg:w-[600px] drop-shadow-2xl"
       src={assets.houseimge}
       alt="house_image"
     />
