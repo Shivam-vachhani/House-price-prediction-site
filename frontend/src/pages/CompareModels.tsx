@@ -342,7 +342,7 @@ const CompareModels: React.FC = () => {
           fontFamily: "'DM Sans','Segoe UI',sans-serif",
         }}
       >
-        {/* ── Desktop topbar ── */}
+
         <div
           className="hidden lg:flex items-center justify-between px-5 bg-white border-b border-gray-100 flex-shrink-0"
           style={{ height: 50, boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}
@@ -398,7 +398,7 @@ const CompareModels: React.FC = () => {
           </div>
         </div>
 
-        {/* ── Scrollable body ── */}
+
         <div
           style={{
             flex: 1,
@@ -414,7 +414,7 @@ const CompareModels: React.FC = () => {
             gap: 12,
           }}
         >
-          {/* ── Model selector tabs ── */}
+
           <div
             style={{
               display: "flex",
@@ -464,7 +464,6 @@ const CompareModels: React.FC = () => {
                       flexShrink: 0,
                     }}
                   />
-                  {/* Short name (LR/RF/XGB) on mobile, full name on larger screens */}
                   <span
                     style={{
                       fontSize: isMobile ? 13 : 14,
@@ -475,7 +474,6 @@ const CompareModels: React.FC = () => {
                   >
                     {isMobile ? meta.short : m.model}
                   </span>
-                  {/* Best / overfits badges hidden on mobile — no room */}
                   {isWin && !isMobile && (
                     <span
                       style={{
@@ -524,11 +522,9 @@ const CompareModels: React.FC = () => {
             })}
           </div>
 
-          {/* ── Score cards ── */}
           <div
             style={{
               display: "grid",
-              // Mobile: 1 column (full width, stacked). Tablet+: side by side.
               gridTemplateColumns: isMobile
                 ? "1fr"
                 : `repeat(${stats.length}, 1fr)`,
@@ -662,7 +658,7 @@ const CompareModels: React.FC = () => {
             })}
           </div>
 
-          {/* ── Middle row: table + radar + bar ── */}
+
           <div
             style={{
               display: "grid",
@@ -674,7 +670,7 @@ const CompareModels: React.FC = () => {
               gap: 10,
             }}
           >
-            {/* Metric table */}
+
             <div
               style={{
                 background: CARD,
@@ -920,7 +916,6 @@ const CompareModels: React.FC = () => {
               </div>
             </div>
 
-            {/* R² bar */}
             <div
               style={{
                 background: CARD,
@@ -1050,7 +1045,6 @@ const CompareModels: React.FC = () => {
             </div>
           </div>
 
-          {/* ── Bottom row: AVP scatter + Why wins ── */}
           <div
             style={{
               display: "grid",
@@ -1062,7 +1056,7 @@ const CompareModels: React.FC = () => {
               gap: 10,
             }}
           >
-            {/* Actual vs Predicted */}
+
             <div
               style={{
                 background: CARD,
@@ -1230,7 +1224,6 @@ const CompareModels: React.FC = () => {
               </div>
             </div>
 
-            {/* Why winner */}
             <div
               style={{
                 background: CARD,

@@ -10,7 +10,6 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* Define paths and the components they should render */}
           <Route path="/" element={<PricePridiction />} />
           <Route path="/market-trends" element={<MarketTrends />} />
           <Route path="/compare" element={<CompareModels />} />

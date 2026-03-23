@@ -346,7 +346,6 @@ const MarketTrends: React.FC = () => {
           </div>
         </div>
 
-        {/* Dashboard body */}
         <div
           style={{
             flex: 1,
@@ -357,7 +356,7 @@ const MarketTrends: React.FC = () => {
             gap: 10,
           }}
         >
-          {/* KPI Cards */}
+
           <div
             style={{
               display: "grid",
@@ -430,7 +429,6 @@ const MarketTrends: React.FC = () => {
             ))}
           </div>
 
-          {/* Charts Grid */}
           <div
             style={{
               flex: isSmall ? "unset" : 1,
@@ -442,7 +440,7 @@ const MarketTrends: React.FC = () => {
               overflow: isSmall ? "visible" : "hidden",
             }}
           >
-            {/* Locality Bar */}
+
             <div
               style={{
                 background: CARD,
@@ -607,7 +605,7 @@ const MarketTrends: React.FC = () => {
               )}
             </div>
 
-            {/* BHK Donut */}
+
             <div
               style={{
                 background: CARD,
@@ -727,7 +725,6 @@ const MarketTrends: React.FC = () => {
               </div>
             </div>
 
-            {/* Feature Importance */}
             <div
               style={{
                 background: CARD,
@@ -899,7 +896,6 @@ const MarketTrends: React.FC = () => {
               </div>
             </div>
 
-            {/* Price Distribution */}
             <div
               style={{
                 background: CARD,
@@ -1012,7 +1008,6 @@ const MarketTrends: React.FC = () => {
               </div>
             </div>
 
-            {/* Area vs Price Scatter */}
             <div
               style={{
                 background: CARD,
@@ -1140,7 +1135,6 @@ const MarketTrends: React.FC = () => {
               </div>
             </div>
 
-            {/* Actual vs Predicted */}
             <div
               style={{
                 background: CARD,

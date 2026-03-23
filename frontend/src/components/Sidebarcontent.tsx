@@ -69,7 +69,6 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
 
   return (
     <>
-      {/* ── Logo ── */}
       <div className="px-5 pb-6 border-b border-gray-100 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <div className="w-12 h-12 bg-[#6E83B2] rounded-full flex items-center justify-center">
@@ -112,7 +111,6 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
         )}
       </div>
 
-      {/* ── Main nav ── */}
       <div className="px-3 pt-5 pb-2">
         <p className="text-[10px] text-gray-400 tracking-widest uppercase px-2 mb-1.5">
           Main
@@ -145,7 +143,7 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
         })}
       </div>
 
-      {/* ── Explore nav ── */}
+
       <div className="px-3 pt-3 pb-2">
         <p className="text-[10px] text-gray-400 tracking-widest uppercase px-2 mb-1.5">
           Explore
@@ -170,7 +168,6 @@ const SidebarContent = ({ onClose }: SidebarContentProps) => {
         })}
       </div>
 
-      {/* ── Kaggle footer ── */}
       <div className="mt-auto px-3 pt-4 border-t border-gray-100">
         <a
           href="https://www.kaggle.com/datasets/prayeshgodhani04/ahmedabad-flat-price-dataset-uncleaned"

@@ -3,14 +3,6 @@ import SidebarContent from "./Sidebarcontent";
 
 interface AppShellProps {
   children: React.ReactNode;
-  /**
-   * dashboard={true}  → <main> is overflow-hidden.
-   *   Use for fixed-height grid pages (MarketTrends, CompareModels) that manage
-   *   their own internal scroll containers.
-   *
-   * dashboard={false} (default) → <main> is overflow-y-auto.
-   *   Use for normal scrolling pages (PricePrediction, etc.).
-   */
   dashboard?: boolean;
 }
 
@@ -20,7 +12,7 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
   const lastScrollY = useRef(0);
   const mainRef = useRef<HTMLDivElement>(null);
 
-  // Primary: listen on <main> — works for normal scrolling pages
+
   useEffect(() => {
     const el = mainRef.current;
     if (!el) return;
@@ -35,11 +27,11 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
     return () => el.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Fallback capture: catches scroll from inner containers on dashboard pages
+
   useEffect(() => {
     const lastInner = new WeakMap<Element, number>();
     const onCapture = (e: Event) => {
-      // Ensure the event target is an Element (not Document) before comparing
+
       if (!(e.target instanceof Element)) return;
       const t = e.target as Element;
       if (
@@ -64,7 +56,7 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
       document.removeEventListener("scroll", onCapture, { capture: true });
   }, []);
 
-  // Close drawer on ESC
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSidebarOpen(false);
@@ -73,7 +65,7 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  // Lock body scroll when drawer is open
+
   useEffect(() => {
     document.body.style.overflow = sidebarOpen ? "hidden" : "";
     return () => {
@@ -103,7 +95,7 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
       `}</style>
 
       <div className="flex h-screen bg-white text-gray-800 font-sans overflow-hidden">
-        {/* ── Desktop Sidebar ── */}
+
         <aside className="hidden lg:flex w-[220px] min-w-[220px] bg-white border-r border-gray-100 flex-col py-6 shadow-sm z-30">
           <SidebarContent />
         </aside>
@@ -125,10 +117,7 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
           </div>
         )}
 
-        {/* ── Main content area ──
-            Normal pages  (dashboard=false): overflow-y-auto  — <main> scrolls.
-            Dashboard pages (dashboard=true): overflow-hidden — children own scroll.
-        ── */}
+
         <main
           ref={mainRef}
           className={`flex-1 min-w-0 flex flex-col bg-white ${
@@ -182,10 +171,10 @@ const AppShell = ({ children, dashboard = false }: AppShellProps) => {
             </button>
           </div>
 
-          {/* Spacer — clears the fixed mobile navbar */}
+
           {!dashboard && <div className="lg:hidden h-[57px] flex-shrink-0" />}
 
-          {/* Page content */}
+
           {children}
         </main>
       </div>

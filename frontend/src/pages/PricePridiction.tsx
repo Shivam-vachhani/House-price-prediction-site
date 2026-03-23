@@ -100,7 +100,7 @@ const PricePrediction = () => {
       .catch((err) => console.warn("Backend fetch failed:", err));
   };
 
-  // No dashboard prop → <main> uses overflow-y-auto, page scrolls freely
+
   return (
     <AppShell>
       <HeroSection onTryPredictClick={ScrollToSection} />

@@ -20,7 +20,6 @@ const ResultPanel = ({
   isNewFlat,
 }: ResultPanelProps) => (
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-    {/* Main price card */}
     <div className="sm:col-span-2 bg-[#6E83B2] rounded-2xl p-5 sm:p-6 text-white">
       <p className="text-[10px] sm:text-xs tracking-widest uppercase text-white/60 mb-2">
         Estimated Market Value
