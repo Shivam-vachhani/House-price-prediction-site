@@ -100,7 +100,7 @@ python app.py
 gunicorn app:app
 ```
 
-The API will be available at like this `http://192.168.10.160:5000` or `http://127.0.0.1:5000` according to your IP.
+The API will be available at `http://127.0.0.1:5000` or `http://192.168.x.x:5000` depending on your local IP address.
 
 ---
 
@@ -129,10 +129,10 @@ npm install
 Create a `.env` file in the `frontend/` directory:
 
 ```env
-VITE_AREA_URL=http://localhost:5000/areas
-VITE_PREDICTION_URL=http://localhost:5000/predict
-VITE_MARKET_TRENDS_API=http://localhost:5000/market-stats
-VITE_MODEL_COMPARISON_API=http://localhost:5000/model-comparison
+VITE_AREA_URL=http://127.0.0.1:5000/areas
+VITE_PREDICTION_http://127.0.0.1:5000/predict
+VITE_MARKET_TRENDS_API=http://127.0.0.1:5000/market-stats
+VITE_MODEL_COMPARISON_API=http://127.0.0.1:5000/model-comparison
 
 ```
 
@@ -337,16 +337,18 @@ vite
 
 ## 📸 Screenshots
 
-> Add screenshots of the three pages here after deployment.
-
 | Page               | Description                               |
 | ------------------ | ----------------------------------------- |
 | `Price Prediction` | Form + result panel with confidence score |
 
 ![Price Prediction Page](/frontend//src/assets/image.png)
+
 | `Market Trends` | Full analytics dashboard |
+
 ![Market Trends Page](/frontend//src/assets/image-1.png)
+
 | `Compare Models` | Side-by-side model evaluation |
+
 ![Compare Models Page](/frontend//src/assets/image-2.png)
 
 ---
